@@ -1,15 +1,5 @@
-import { styles } from "@/assets/styles/auth.styles";
-import { Text, View } from "react-native";
+import { Redirect } from "expo-router";
 
 export default function Index() {
-  return (
-    <View
-      style={styles.container}
-    >
-      <Text>Quiero sexoooo con todas las prras del congal</Text>
-      <Text>Traigo cash, traigo hash, cush y estilo original</Text>
-    </View>
-  );
+  return <Redirect href="/(tabs)" />;
 }
-
-
