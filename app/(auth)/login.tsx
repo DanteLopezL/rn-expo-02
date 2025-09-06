@@ -1,0 +1,42 @@
+import { styles } from "@/assets/styles/auth.styles";
+import { COLORS } from "@/assets/styles/theme";
+import { Ionicons } from "@expo/vector-icons";
+import { Image, Text, TouchableOpacity, View } from "react-native";
+
+export default function Login() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.brandSection}>
+        <View style={styles.logoContainer}>
+          <Ionicons name="leaf" size={32} color={COLORS.primary} />
+        </View>
+        <Text style={styles.appName}>Spotlight</Text>
+        <Text style={styles.tagline}>dont miss anything</Text>
+      </View>
+
+      <View style={styles.illustrationContainer}>
+        <Image
+          source={require("@/assets/images/login.png")}
+          style={styles.illustration}
+          resizeMode="cover"
+        />
+      </View>
+
+      <View style={styles.loginSection}>
+        <TouchableOpacity
+          style={styles.googleButton}
+          onPress={() => console.log("continue with google")}
+          activeOpacity={0.9}
+        >
+          <View style={styles.googleIconContainer}>
+            <Ionicons name="logo-google" size={20} color={COLORS.surface} />
+          </View>
+          <Text style={styles.googleButtonText}>Continue with Google</Text>
+        </TouchableOpacity>
+        <Text style={styles.termsText}>
+          By continuing,you agree to our Terms and Privacy Policy
+        </Text>
+      </View>
+    </View>
+  );
+}
