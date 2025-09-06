@@ -1,9 +1,16 @@
 import { styles } from "@/assets/styles/auth.styles";
 import { COLORS } from "@/assets/styles/theme";
 import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
 export default function Login() {
+  const router = useRouter();
+
+  const handleGoogleSignIn = async () => {
+    router.replace("/(tabs)");
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.brandSection}>
@@ -25,7 +32,7 @@ export default function Login() {
       <View style={styles.loginSection}>
         <TouchableOpacity
           style={styles.googleButton}
-          onPress={() => console.log("continue with google")}
+          onPress={() => handleGoogleSignIn()}
           activeOpacity={0.9}
         >
           <View style={styles.googleIconContainer}>
