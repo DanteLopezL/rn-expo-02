@@ -35,9 +35,9 @@ export default function Create() {
   };
 
   const handleShare = async () => {
-    setSelectedImage(null)
-    setCaption("")
-    router.push("/(tabs)")
+    setSelectedImage(null);
+    setCaption("");
+    router.push("/(tabs)");
   };
 
   if (!selectedImage) {
